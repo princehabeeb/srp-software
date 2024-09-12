@@ -14,6 +14,7 @@
           <li><a href="#home" class="active">Home</a></li>
           <li><a href="#register">Register Student</a></li>
           <li><a href="#predict">Predict Result</a></li>
+          <!-- <li><a href="#login">Login</a></li> -->
           <li><a href="#settings">Settings</a></li>
         </ul>
       </nav>
@@ -40,7 +41,6 @@
             placeholder="Enter student name"
             required
           />
-
           <label for="studentId">Student ID:</label>
           <input
             type="text"
@@ -48,7 +48,6 @@
             placeholder="Enter student ID"
             required
           />
-
           <label for="studentEmail">Student Email:</label>
           <input
             type="email"
@@ -56,7 +55,6 @@
             placeholder="Enter student email"
             required
           />
-
           <button type="submit">Register Student</button>
         </form>
       </section>
@@ -72,7 +70,6 @@
             placeholder="Enter study hours"
             required
           />
-
           <label for="previousScore">Previous Score:</label>
           <input
             type="number"
@@ -80,8 +77,6 @@
             placeholder="Enter previous score"
             required
           />
-
-          <!-- Additional Input Fields -->
           <label for="attendance">Attendance (%):</label>
           <input
             type="number"
@@ -89,7 +84,6 @@
             placeholder="Enter attendance percentage"
             required
           />
-
           <label for="assignments">Assignments Completed (%):</label>
           <input
             type="number"
@@ -97,7 +91,6 @@
             placeholder="Enter assignments completion rate"
             required
           />
-
           <label for="participation">Participation Level (1-10):</label>
           <input
             type="number"
@@ -105,10 +98,8 @@
             placeholder="Enter participation level"
             required
           />
-
           <button type="submit">Predict Result</button>
         </form>
-
         <div id="result" class="hidden">
           <h3>Predicted Score:</h3>
           <p id="predictedScore">N/A</p>
@@ -124,43 +115,21 @@
             <option value="linear">Linear Regression</option>
             <option value="polynomial">Polynomial Regression</option>
           </select>
-
           <label for="dataSource">Data Source:</label>
           <select id="dataSource">
             <option value="local">Local Database</option>
             <option value="api">External API</option>
           </select>
-
           <label for="theme">Theme:</label>
           <select id="theme">
             <option value="light">Light</option>
             <option value="dark">Dark</option>
           </select>
-
           <button type="submit">Save Settings</button>
         </form>
       </section>
 
-      <!-- Upload Training Data Section -->
-      <section id="uploadData">
-        <h2>Upload Training Data</h2>
-        <form id="uploadForm">
-          <label for="trainingDataFile">Upload CSV File:</label>
-          <input type="file" id="trainingDataFile" accept=".csv" />
-          <button type="submit">Upload</button>
-        </form>
-        <div id="uploadResult" class="hidden">
-          <p>Training data uploaded successfully!</p>
-        </div>
-      </section>
-
-      <!-- Chart for Prediction -->
-      <section id="chartSection">
-        <h2>Score Prediction Graph</h2>
-        <canvas id="scoreChart" width="400" height="200"></canvas>
-      </section>
-
-      <!-- auth -->
+      <!-- Authentication Section -->
       <section id="authSection">
         <!-- Signup Form -->
         <form id="signupForm" class="hidden">
@@ -172,38 +141,21 @@
           <button type="submit">Sign Up</button>
         </form>
 
-        <!-- Login Form -->
-        <form id="loginForm">
+        <!-- Login Section -->
+        <section id="login" class="hidden">
           <h2>Login</h2>
-          <label for="loginUsername">Username:</label>
-          <input type="text" id="loginUsername" required />
-          <label for="loginPassword">Password:</label>
-          <input type="password" id="loginPassword" required />
-          <button type="submit">Login</button>
-        </form>
+          <form id="loginForm">
+            <label for="loginUsername">Username:</label>
+            <input type="text" id="loginUsername" required />
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" required />
+            <button type="submit">Login</button>
+          </form>
+          <button id="logoutBtn" class="hidden">Logout</button>
+        </section>
 
         <!-- Logout Button -->
         <button id="logoutBtn" class="hidden">Logout</button>
-      </section>
-
-      <section id="predictionSection" class="hidden">
-        <!-- Prediction Form (already present in your code) -->
-        <form id="predictionForm">
-          <label for="studyHours">Study Hours:</label>
-          <input type="number" id="studyHours" required />
-          <label for="previousScore">Previous Score:</label>
-          <input type="number" id="previousScore" required />
-          <label for="attendance">Attendance:</label>
-          <input type="number" id="attendance" required />
-          <label for="assignments">Assignments:</label>
-          <input type="number" id="assignments" required />
-          <label for="participation">Participation:</label>
-          <input type="number" id="participation" required />
-          <button type="submit">Predict Score</button>
-        </form>
-        <div id="result" class="hidden">
-          <p>Predicted Score: <span id="predictedScore"></span></p>
-        </div>
       </section>
     </main>
 

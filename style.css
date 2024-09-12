@@ -53,6 +53,10 @@ section.active {
     display: block;
 }
 
+.hidden {
+    display: none;
+}
+
 h2 {
     color: #333;
 }
