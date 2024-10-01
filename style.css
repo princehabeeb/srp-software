@@ -1,3 +1,9 @@
+*{
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -7,13 +13,52 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    height: auto;
 }
 
 header {
     background: #333;
     color: #fff;
     padding: 1rem;
+    background-color: #333; /* Dark background for contrast */
+    padding: 1rem; /* Add padding for spacing */
+    display: flex; /* Flexbox for easy alignment */
+    justify-content: space-between; /* Space out the navbar content */
+    align-items: center; /* Center the items vertically */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
+
+.navbar-brand {
+    font-size: 1.5rem; /* Make brand name bigger */
+    font-weight: bold; /* Bold brand */
+    color: #fff; /* White text color */
+    text-transform: uppercase; /* Uppercase brand */
+    text-decoration: none; /* Remove underline */
+}
+  
+  .navbar-links {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Arrange links horizontally */
+    gap: 1.5rem; /* Space between links */
+  }
+  
+  .navbar-links li {
+    display: inline-block; /* Ensure the list items are inline */
+  }
+  
+  .navbar-links a {
+    color: #fff; /* White text */
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem; /* Adjust font size */
+    padding: 0.5rem 1rem; /* Add padding to links */
+    border-radius: 5px; /* Round the corners of links */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .navbar-links a:hover {
+    background-color: #555; /* Change background on hover */
+    color: #ff8c00; /* Change text color on hover */
+  }
 
 header h1 {
     margin: 0;
@@ -68,7 +113,18 @@ section.active {
 }
 
 h2 {
-    color: #333;
+    /* color: #333; */
+    font-size: 3rem; /* Make the text big */
+  font-weight: 800; /* Make the text bold */
+  color: #333; /* Text color */
+  text-align: center; /* Center the text */
+  text-transform: uppercase; /* Make the text uppercase */
+  letter-spacing: 2px; /* Add spacing between letters */
+  background: linear-gradient(90deg, #ff8c00, #ff0080); /* Gradient background */
+  -webkit-background-clip: text; /* Clip the gradient to the text */
+  -webkit-text-fill-color: transparent; /* Make the gradient visible inside the text */
+  margin: 20px 0; /* Add some spacing around the heading */
+  line-height: 1.2; /* Adjust the space between lines */
 }
 
 form {
@@ -113,4 +169,9 @@ button:hover {
 
 .hidden {
     display: none;
+}
+
+
+.desc{
+    text-align: center;
 }
