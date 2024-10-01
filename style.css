@@ -3,7 +3,10 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: url(./images/bg.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 header {
@@ -42,11 +45,18 @@ main {
 }
 
 section {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.1); 
+   border-radius: 10px; 
+    backdrop-filter: blur(10px); 
+   -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 5px;
     display: none;
+    color: #fff;
 }
 
 section.active {
