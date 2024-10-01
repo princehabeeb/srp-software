@@ -60,6 +60,14 @@ header {
     color: #ff8c00; /* Change text color on hover */
   }
 
+/* Hamburger button styling */
+.menu-btn {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: none; /* Hidden by default on larger screens */
+}
+
 header h1 {
     margin: 0;
 }
@@ -175,3 +183,47 @@ button:hover {
 .desc{
     text-align: center;
 }
+
+/* Hide nav links on mobile */
+@media (max-width: 768px) {
+    .menu-btn {
+      display: block; /* Show hamburger on small screens */
+    }
+  
+    nav {
+      position: absolute;
+      top: 70px;
+      right: 0;
+      background-color: #333;
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      transition: height 0.3s ease;
+      z-index: 9999;
+    }
+  
+    .navbar-links {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+  
+    nav.open {
+      height: 200px; /* Expand the nav when toggled */
+    }
+
+    h2 {
+        /* color: #333; */
+    font-size: 1.5rem; /* Make the text big */
+      font-weight: 800; /* Make the text bold */
+      color: #333; /* Text color */
+      text-align: center; /* Center the text */
+      text-transform: uppercase; /* Make the text uppercase */
+      letter-spacing: 2px; /* Add spacing between letters */
+      background: linear-gradient(90deg, #ff8c00, #ff0080); /* Gradient background */
+      -webkit-background-clip: text; /* Clip the gradient to the text */
+      -webkit-text-fill-color: transparent; /* Make the gradient visible inside the text */
+      margin: 20px 0; /* Add some spacing around the heading */
+      line-height: 1.2; /* Adjust the space between lines */
+    }
+  }

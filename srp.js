@@ -8,6 +8,25 @@ const signupForm = document.getElementById('signupForm');
 const predictionForm = document.getElementById('predictionForm');
 const resultDiv = document.getElementById('result');
 const predictedScoreElement = document.getElementById('predictedScore');
+// Grab the elements
+const menuBtn = document.querySelector('.menu-btn');
+const nav = document.querySelector('nav');
+// const navLinks = document.querySelectorAll('.navbar-links a');
+
+// Toggle the navigation menu on click of the hamburger menu
+menuBtn.addEventListener('click', () => {
+  nav.classList.toggle('open');
+});
+
+// Close the menu when any nav link is clicked on mobile
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (nav.classList.contains('open')) {
+      nav.classList.remove('open');
+    }
+  });
+});
+
 
 function isAuthenticated() {
     return !!localStorage.getItem('loggedInUser');
